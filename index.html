@@ -3,61 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Profile</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1em 0;
-        }
-        .container {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 2em;
-        }
-        .about {
-            background-color: white;
-            padding: 1em;
-            border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-            margin-bottom: 2em;
-        }
-        .portfolio {
-            background-color: white;
-            padding: 1em;
-            border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>    
+<title>Profile</title>
 </head>
 <body>
-    <header>
-        <h1>Your Name</h1>
-        <p>Web Developer | Designer</p>
-    </header>
-    <div class="container">
-        <section class="about">
-            <h2>About Me</h2>
-            <p>Hello! I'm a passionate web developer with a keen eye for design. I love creating user-friendly and visually appealing websites that deliver a great user experience.</p>
-        </section>
-        <section class="portfolio">
-            <h2>Portfolio</h2>
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac ante sit amet libero elementum aliquam.</p>
+    <!-- header-->
+    <div class="header">
+        <div class="icon-container text-center">
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><img src="path/to/leetcode-icon.png" alt="LeetCode" height="24"></a>
+          </div>
+        </div>
+      </div>
+      <!-- background -->
+
+    <div class="background">
+        <div class="background-div">
+            <div class="container text-center"></div>
+              <h2 id="changing-text">Dynamic Text</h2>
             </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Nulla facilisi. Morbi vitae tellus nec risus luctus volutpat. Sed posuere mauris id arcu ultrices, vel dictum eros consectetur.</p>
-            </div>
-        </section>
+          </div>    
     </div>
+
+    </div>
+    <!-- Cards-->
+    <div class="card-container fade-on-scroll">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card fading-card">
+              <img src="path/to/your/image.jpg" class="card-img-top" alt="Card Image">
+              <div class="card-body">
+                <h5 class="card-title">Card Title</h5>
+                <p class="card-text">Some text to describe the card.</p>
+              </div>
+            </div>
+
+        <div class="row">
+                <div class="col-md-4">
+                  <div class="card fading-card">
+                    <img src="path/to/your/image.jpg" class="card-img-top" alt="Card Image">
+                    <div class="card-body">
+                      <h5 class="card-title">Card Title</h5>
+                      <p class="card-text">Some text to describe the card.</p>
+                    </div>
+                  </div>
+
+
+        <div class="row">
+                    <div class="col-md-4">
+                      <div class="card fading-card">
+                        <img src="path/to/your/image.jpg" class="card-img-top" alt="Card Image">
+                        <div class="card-body">
+                          <h5 class="card-title">Card Title</h5>
+                          <p class="card-text">Some text to describe the card.</p>
+                        </div>
+                      </div>
+          </div>
+          
+          
+
+        
+          
+          <!-- You can add more columns with cards as needed -->
+          
+        </div>
+      </div>
+      <script>
+      const changingText = document.getElementById('changing-text');
+  
+  const textArray = [
+    'Frontend Development',
+    'Java Programming',
+    'C Java Programming','Bootstrap','Microsoft office','Software Development','Many more!'
+  ];
+
+  let currentIndex = 0;
+  let currentText = '';
+  let currentCharacterIndex = 0;
+  let typing = true;
+
+  function updateText() {
+  if (currentCharacterIndex < textArray[currentIndex].length) {
+    currentText += textArray[currentIndex][currentCharacterIndex];
+    changingText.textContent = currentText;
+    currentCharacterIndex++;
+  } else if (currentText.length > 0) {
+    currentText = currentText.slice(0, -1); // Remove the last character
+    changingText.textContent = currentText;
+  } else {
+    currentText = '';
+    currentCharacterIndex = 0;
+    currentIndex = (currentIndex + 1) % textArray.length;
+  }
+}
+  // Update the text every 100 milliseconds for the typewriter effect
+  setInterval(updateText, 150);
+  // fad on scroll//
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const fadeElements = document.querySelectorAll(".fade-on-scroll");
+
+    function fadeInOnScroll() {
+      fadeElements.forEach((element) => {
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (elementTop < windowHeight * 0.75) {
+          element.classList.add("fade-in");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", fadeInOnScroll);
+    window.addEventListener("load", fadeInOnScroll); // Initial check
+  });
+      </script>  
 </body>
 </html>
