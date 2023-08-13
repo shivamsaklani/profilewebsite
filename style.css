@@ -5,26 +5,61 @@ body {
     opacity: 1;
     transition: opacity 0.5s;
   }
-  /* header*/
-  .header {
-    background-color: #333;
-    color: white;
-    padding: 3px;
-    opacity:0.7;
-  }
+ 
+  .header{
+    background-color: rgb(236, 29, 236);
+    opacity: 0.6;
 
-  .social-icons {
-    font-size: 20px;
+  
+
   }
+  .social-icons {
+    font-size: 25px;
+  }
+#dynamic-line{
+  color:rgb(255, 58, 255);
+}
+
 
   .social-icons a {
-    color: white;
-    margin-right: 10px;
+    color: rgb(255, 255, 255);
   }
+
+   /* Your styles here */
+   .blinking-cursor {
+    display: inline-block;
+    width: 1em;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.1;
+    }
+}
+/*Profile image*/
+.glow-profile {
+  height: 20em;
+  width:20em;
+  border-radius: 50%;
+  margin-left:auto;
+  box-shadow: 0 0 10px rgba(0, 0, 255, 0.7);
+  animation: glow-animation 2s infinite alternate;
+}
+
+@keyframes glow-animation {
+  0% {
+      box-shadow: 0 0 10px rgba(238, 49, 49, 0.726);
+  }
+  100% {
+      box-shadow: 0 0 20px rgba(0, 0, 255, 1);
+  }
+}
   /*image*/
+
 .background{
   
-        background-image: url('bg-img.jpg');
+        background-image: url('bg1.jpg');
         margin:0;
         color:white;
         padding:0;
@@ -42,40 +77,11 @@ body {
 
 }
 
- .fade-on-scroll {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s, transform 0.5s;
-    }
+  @media (min-width: 300px) and (max-width: 992px) { /* Medium devices (laptops) */
+   .glow-profile {
+    width:10em;
+    height:10em;
+    border-radius: 50%;
 
-    .fade-in {
-      opacity: 1 !important;
-      transform: translateY(0) !important;
-    }
-.fading-card {
-    width: 300px;
-    margin: 20px;
-    transition: background-color 0.5s;
-
-  }
-
-
-.fading-card:hover {
-    background-color: rgba(19, 168, 236, 0.877); /* Fading background color */
-  }
-@media (max-width: 760px) { /* Medium size */
-    #changing-text {
-      font-size: 18px;
-    }
-    .background{
-        height:80vh;
-    }
-  }
-  @media (min-width: 765px) and (max-width: 992px) { /* Medium devices (laptops) */
-    #changing-text {
-      font-size: 24px;
-    }
-    .background{
-        height:80vh;
-    }
+   }
   }

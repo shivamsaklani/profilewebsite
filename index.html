@@ -16,118 +16,45 @@
 <body>
     <!-- header-->
     <div class="header">
-        <div class="icon-container text-center">
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><img src="path/to/leetcode-icon.png" alt="LeetCode" height="24"></a>
-          </div>
-        </div>
-      </div>
-      <!-- background -->
-
-    <div class="background">
-        <div class="background-div">
-            <div class="container text-center"></div>
-              <h2 id="changing-text">Dynamic Text</h2>
-            </div>
-          </div>    
-    </div>
-
-    </div>
-    <!-- Cards-->
-    <div class="card-container fade-on-scroll">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card fading-card">
-              <img src="path/to/your/image.jpg" class="card-img-top" alt="Card Image">
-              <div class="card-body">
-                <h5 class="card-title">Card Title</h5>
-                <p class="card-text">Some text to describe the card.</p>
-              </div>
-            </div>
-
-        <div class="row">
-                <div class="col-md-4">
-                  <div class="card fading-card">
-                    <img src="path/to/your/image.jpg" class="card-img-top" alt="Card Image">
-                    <div class="card-body">
-                      <h5 class="card-title">Card Title</h5>
-                      <p class="card-text">Some text to describe the card.</p>
-                    </div>
-                  </div>
-
-
-        <div class="row">
-                    <div class="col-md-4">
-                      <div class="card fading-card">
-                        <img src="path/to/your/image.jpg" class="card-img-top" alt="Card Image">
-                        <div class="card-body">
-                          <h5 class="card-title">Card Title</h5>
-                          <p class="card-text">Some text to describe the card.</p>
-                        </div>
-                      </div>
-          </div>
-          
-          
-
-        
-          
-          <!-- You can add more columns with cards as needed -->
+      <div class="icon-container text-center">
+        <div class="social-icons">
+          <a href="https://www.youtube.com/channel/UCCap2MXyGAV4qKPHZt3RT9g"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.instagram.com/shivamsaklani4002/"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/shivam-saklani-378061199/"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/shivamsaklani"><i class="fab fa-github"></i></a>
+          <a href="https://github.com/shivamsaklani"><i class="fab fa-telegram"></i></a>
           
         </div>
-      </div>
-      <script>
-      const changingText = document.getElementById('changing-text');
   
-  const textArray = [
-    'Frontend Development',
-    'Java Programming',
-    'C Java Programming','Bootstrap','Microsoft office','Software Development','Many more!'
-  ];
+      </div>
+    </div>
+      <!-- background -->
+    <div class="background">
+      
+        <div class="background-div">
+          
+          <div class="dynamic-text">
+            <img class="glow-profile" src="bg-img.jpg"/>
+            <h1>Welcome to the website</h1>
+            <h3 id="dynamic-line">
+                <span id="text-content"></span>
+                <span class="blinking-cursor">|</span>
+            </h3>
+          </div>
 
-  let currentIndex = 0;
-  let currentText = '';
-  let currentCharacterIndex = 0;
-  let typing = true;
+          </div>  
+            
+     </div> 
+     <!--My skills-->
+          
+         
+    
 
-  function updateText() {
-  if (currentCharacterIndex < textArray[currentIndex].length) {
-    currentText += textArray[currentIndex][currentCharacterIndex];
-    changingText.textContent = currentText;
-    currentCharacterIndex++;
-  } else if (currentText.length > 0) {
-    currentText = currentText.slice(0, -1); // Remove the last character
-    changingText.textContent = currentText;
-  } else {
-    currentText = '';
-    currentCharacterIndex = 0;
-    currentIndex = (currentIndex + 1) % textArray.length;
-  }
-}
-  // Update the text every 100 milliseconds for the typewriter effect
-  setInterval(updateText, 150);
-  // fad on scroll//
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const fadeElements = document.querySelectorAll(".fade-on-scroll");
-
-    function fadeInOnScroll() {
-      fadeElements.forEach((element) => {
-        const elementTop = element.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-
-        if (elementTop < windowHeight * 0.75) {
-          element.classList.add("fade-in");
-        }
-      });
-    }
-
-    window.addEventListener("scroll", fadeInOnScroll);
-    window.addEventListener("load", fadeInOnScroll); // Initial check
-  });
+    
+      <script src="script.js">
+      
+  
       </script>  
 </body>
 </html>
