@@ -1,7 +1,19 @@
+/*dynamic header*/
+const menuIcon = document.querySelector('.menu-icon');
+const links = document.querySelectorAll('.links');
+
+menuIcon.addEventListener('click', () => {
+  links.forEach(link => {
+    link.classList.toggle('show');
+  });
+});
+
+
+/* dynamic line*/
 const dynamicLine = document.getElementById('dynamic-line');
         const dynamicTexts = [
-            "Programming","Youtuber",
-            "Web Development",
+            "Programmer","Youtuber","Freelancer",
+            "Fronted Developer",
             // Add more dynamic text variations here
         ];
 
@@ -38,22 +50,36 @@ const dynamicLine = document.getElementById('dynamic-line');
 
         // Start the animation
         updateDynamicText();
-// fad on scroll//
-const aboutSection = document.querySelector('.about-section');
+// about section scroll//
+const aboutContent = document.querySelector('.about-content');
+    let prevScrollY = window.scrollY;
 
-function fadeOnScroll() {
-  const sectionTop = aboutSection.getBoundingClientRect().top;
-  const windowHeight = window.innerHeight;
+    function fadeInOnScroll() {
+      const sectionTop = aboutContent.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
 
-  if (sectionTop < windowHeight * 0.8) {
-    aboutSection.classList.add('active');
-  } else {
-    aboutSection.classList.remove('active');
-  }
-}
+      if (sectionTop < windowHeight * 0.8) {
+        aboutContent.classList.add('active');
+      } else {
+        aboutContent.classList.remove('active');
+      }
 
-window.addEventListener('scroll', fadeOnScroll);
+      prevScrollY = window.scrollY;
+    }
 
+    function checkScrollDirection() {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY < prevScrollY) {
+        fadeInOnScroll();
+      } else {
+        fadeInOnScroll();
+      }
+
+      prevScrollY = currentScrollY;
+    }
+
+    window.addEventListener('scroll', checkScrollDirection);
 
 
 //end//

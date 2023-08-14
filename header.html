@@ -1,307 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta tags and styles -->
-    <style>
-        /* Your styles here */
-        .header {
-            padding: 20px;
-            background-color: #333;
-            color: white;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 100;
-        }
-        .profile-image {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
-        .nav-links {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-        .nav-links li {
-            margin-right: 20px;
-        }
-        .container.text-center{
-            background-color: aquamarine;
-            margin:50%;
-        }
-        body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f7f7f7;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-.skills-section {
-  width: 80%;
-  margin: 50px auto;
-  background-color: white;
-  padding: 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-}
+    .header {
+      position: relative;
+    }
 
-.skill {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-}
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      background-color: white;
+      z-index: 100;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
 
-.skill p {
-  margin: 10px 0;
-  font-weight: bold;
-}
+    .sticky-header ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      padding: 10px 0;
+      margin: 0;
+    }
 
-.skill-circle {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  background-color: #f0f0f0;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  font-weight: bold;
-}
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f7f7f7;
-}
+    .sticky-header li {
+      margin: 0 15px;
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
 
-.about-section {
-  width: 80%;
-  margin: 50px auto;
-  background-color: white;
-  padding: 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  overflow: hidden;
-}
-
-.about-content {
-  flex: 1;
-}
-
-.hidden-content {
-  display: none;
-  flex: 1;
-}
-
-.toggle-info {
-  background-color: #2965f1;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.toggle-info:hover {
-  background-color: #1f4aa0;
-}
-
-.html {
-  background-color: #da01f7;
-  color: white;
-}
-
-.css {
-  background-color: #da01f7;
-  color: white;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f7f7f7;
-}
-
-.about-section {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-
-.about-content {
-  text-align: center;
-  padding: 20px;
-}
-
-.about-section.active {
-  opacity: 1;
-}
-
-
-       
-
-    </style>
+    .content {
+      /* Add your content styles here */
+      height: 1500px; /* Just for demonstration */
+    }
+  </style>
+  <title>Your Website</title>
 </head>
 <body>
-    <div class="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 text-center">
-                    <img src="path-to-your-photo.jpg" alt="My Photo" class="profile-image">
-                    <h1>Your Name</h1>
-                </div>
-                <div class="col-md-8">
-                    <ul class="nav-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+  <header class="sticky-header">
+    <div class="horizontal-list">
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Portfolio</li>
+        <li>Skills</li>
+        <li>Contact</li>
+      </ul>
     </div>
-    
-    <!-- Your content sections -->
-    <div id="home">
-        <div class="container text-center">
-            <h2>Welcome to My Portfolio</h2>
-            <p>
-                I'm a BTech student who enjoys music, coding, cycling, and watching movies.
-                This website is where I'll be sharing updates about my projects, skills, and more.
-            </p>
-        </div>
-
-    </div>
-    <div id="about">
-      
-  <div class="about-section">
-    <div class="about-content">
-      <h2>About Me</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat ex sed felis mattis, ac blandit quam laoreet.</p>
-    </div>
+  </header>
+  
+  <div class="content">
+    <!-- Your website content goes here -->
   </div>
   
+  <script>
+    const header = document.querySelector('.sticky-header');
 
-    </div>
-    <div id="skills"><div class="container text-center">
-        <h2>My Skills</h2>
-        <p>
-            I have a passion for learning and mastering various skills. Here are some of the skills I've developed so far:
-        </p>
-        <ul>
-            <li>Programming Languages: Java, Python, JavaScript</li>
-            <li>Web Development: HTML, CSS, Bootstrap</li>
-            <li>Database Management: SQL</li>
-            <li>Version Control: Git</li>
-            <li>Problem Solving and Algorithms</li>
-        </ul>
-        <p>
-            I'm constantly working to expand my skillset and take on new challenges. Stay tuned for updates on my latest projects!
-        </p>
-    </div>
-</div>
-In this example, the content is wrapped in a div element with the id of "skills". The content itself includes a heading, a paragraph explaining your skills, and a list of skills you've developed so far. You can customize the content and styles as needed to reflect your actual skills and accomplishments.
+    function toggleStickyHeader() {
+      if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }
 
-
-
-
-
-</div>
-    <div id="portfolio">
-        
-        <div class="skills-section">
-            <h2>My Skills</h2>
-            <div class="skill">
-              <div class="skill-circle html">
-                <div class="skill-percentage">90%</div>
-              </div>
-              <p>HTML</p>
-            </div>
-            <div class="skill">
-              <div class="skill-circle css">
-                <div class="skill-percentage">85%</div>
-              </div>
-              <p>CSS</p>
-            </div>
-            <!-- Add more skills here -->
-          </div>
-        
-        </div>
-    <div id="contact">
-        <div class="skills-section">
-            <h2>My Skills</h2>
-            <div class="skill">
-              <p>HTML</p>
-              <div class="skill-bar">
-                <div class="skill-level html">
-                  <span class="percentage">90%</span>
-                </div>
-              </div>
-            </div>
-            <div class="skill">
-              <p>CSS</p>
-              <div class="skill-bar">
-                <div class="skill-level css">
-                  <span class="percentage">85%</span>
-                </div>
-              </div>
-            </div>
-            <!-- Add more skills here -->
-          </div>
-    </div>
-
-    <script>
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-        const aboutSection = document.querySelector('.about-section');
-let prevScrollY = window.scrollY;
-
-function fadeOnScroll() {
-  const sectionTop = aboutSection.getBoundingClientRect().top;
-  const windowHeight = window.innerHeight;
-
-  if (sectionTop < windowHeight * 0.8) {
-    aboutSection.classList.add('active');
-  } else {
-    aboutSection.classList.remove('active');
-  }
-
-  prevScrollY = window.scrollY;
-}
-
-function checkScrollDirection() {
-  const currentScrollY = window.scrollY;
-
-  if (currentScrollY < prevScrollY) {
-    fadeOnScroll();
-  }
-}
-
-window.addEventListener('scroll', checkScrollDirection);
-
-    </script>
+    window.addEventListener('scroll', toggleStickyHeader);
+  </script>
 </body>
 </html>
