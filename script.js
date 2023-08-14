@@ -39,21 +39,32 @@ const dynamicLine = document.getElementById('dynamic-line');
         // Start the animation
         updateDynamicText();
 // fad on scroll//
+const aboutSection = document.querySelector('.about-section');
 
-document.addEventListener("DOMContentLoaded", function () {
-    const fadeElements = document.querySelectorAll(".fade-on-scroll");
+function fadeOnScroll() {
+  const sectionTop = aboutSection.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
 
-    function fadeInOnScroll() {
-      fadeElements.forEach((element) => {
-        const elementTop = element.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
+  if (sectionTop < windowHeight * 0.8) {
+    aboutSection.classList.add('active');
+  } else {
+    aboutSection.classList.remove('active');
+  }
+}
 
-        if (elementTop < windowHeight * 0.75) {
-          element.classList.add("fade-in");
-        }
-      });
-    }
+window.addEventListener('scroll', fadeOnScroll);
 
-    window.addEventListener("scroll", fadeInOnScroll);
-    window.addEventListener("load", fadeInOnScroll); // Initial check
-  });
+
+
+//end//
+
+
+  // Smooth scrolling
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
