@@ -83,7 +83,11 @@ const aboutContent = document.querySelector('.about-content');
 
 
 //end//
+//start//
 
+
+
+//end//
 
   // Smooth scrolling
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
