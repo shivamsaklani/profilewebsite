@@ -281,82 +281,68 @@ nav .selected {
   background-color: rgb(231, 18, 231);
   box-shadow:5px 2px 3px rgb(8, 218, 255);
 }
-/* contact me*/
+/* Portfolio*/
+.portfolio{
+  color:rgb(0, 0, 0);
+  text-shadow:1px 1px rgb(8, 218, 255);
+  
+}
+.portfolio-section {
+  padding: 50px 0;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.footer {
-  background-color: rgb(252, 115, 115);;
-  color:rgb(22, 22, 22);
-  box-shadow: 3px 2px rgb(141, 137, 134);
-  border-radius: 10px;
-  padding: 20px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+.section-header h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
-.contact-form {
-  max-width: 300px;
+.card {
   background-color: white;
+  padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  padding: 20px;
   margin-bottom: 20px;
 }
 
-.contact-form h2 {
-  margin-bottom: 20px;
+.card h3 {
+  margin-top: 0;
+  font-size: 20px;
 }
 
-.contact-form label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.contact-form input[type="text"],
-.contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-.contact-form textarea {
-  resize: vertical;
-}
-
-.contact-form button {
-  background-color: #330b7c;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 3px;
-}
-
-.contact-form button:hover {
-  background-color: #2a0a5e;
-}
-
-@media screen and (max-width: 768px) {
-  .footer {
-    flex-direction: column-reverse;
-    align-items: center;
+@media screen and (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
   }
+}
+/* video section*/
 
-  .contact-form {
-    width: 100%;
-    max-width: 100%;
-  }
 /*end*/
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.footer-icon {
+  font-size: 24px;
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+}
 
+.footer-icon:hover {
+  color: #d1d1d1;
+}
 /* Device adaptive*/
 
   @media (min-width: 300px) and (max-width: 992px) { /* Medium devices (laptops) */
@@ -368,4 +354,4 @@ nav .selected {
    }
    }
   
-  }
+  

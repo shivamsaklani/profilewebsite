@@ -83,7 +83,8 @@ const aboutContent = document.querySelector('.about-content');
 
 
 //end//
-//start//
+//video section//
+
 
 
 
