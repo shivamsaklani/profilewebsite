@@ -12,8 +12,8 @@ menuIcon.addEventListener('click', () => {
 /* dynamic line*/
 const dynamicLine = document.getElementById('dynamic-line');
         const dynamicTexts = [
-            "Programmer","Youtuber","Freelancer",
-            "Fronted Developer",
+            "Programmer","Fronted Developer","Youtuber","Freelancer",
+            "SEO Skills"
             // Add more dynamic text variations here
         ];
 
